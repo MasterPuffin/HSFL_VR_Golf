@@ -43,4 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc663723e6dd9a4cbfa9e508d2d1b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowConfirmTime: 6
+  arrowConfirmTime: 5
+  teleportTime: 10
+  overTeleTime: 0
+  hudTeleport: {fileID: 0}
+  hudGolf: {fileID: 0}
