@@ -13,7 +13,7 @@ public class BallController : MonoBehaviour
     public GameObject golfclub;
     public GameObject xrrig;
     private Rigidbody rb;
-    public float ballForce = 100f;                      // Ball stärke (wenn der Schlag zu doll ist hier ändern)
+    public float ballForce = 5000f;                      // Ball stärke (wenn der Schlag zu doll ist hier ändern)
     public bool hit = false;
     private Vector3 v3Force;
     private Vector3 lastPosition;
@@ -44,8 +44,11 @@ public class BallController : MonoBehaviour
 
         if (hit)                                                        //Wenn der Ball getroffen wurde
         {
-             if(rb.IsSleeping() && !golfHoleScript.holeWon)             // Wenn der Ball sich nicht mehr bewegt und nicht im Ziel ist
-             {                      
+             //if(rb.IsSleeping() && !golfHoleScript.holeWon)             // Wenn der Ball sich nicht mehr bewegt und nicht im Ziel ist
+             if(rb.velocity.magnitude < 0.1 && !golfHoleScript.holeWon)             // Wenn der Ball sich nicht mehr bewegt und nicht im Ziel ist
+             {      
+                //Stop ball movement
+                rb.velocity = new Vector3(0 ,0, 0);
                 Debug.Log("Bewegt sich nicht mehr");                    
                 xrrig.transform.position = transform.position;          // XR Rig wird auf die Position des Balls gesetzt
                 xrrig.transform.Rotate(0,-90,0);                        // XR Rig wird um 90 Grad zurück gedreht

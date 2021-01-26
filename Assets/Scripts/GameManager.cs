@@ -5,7 +5,7 @@ using UnityTemplateProjects;
 
 public class GameManager : MonoBehaviour
 {
-    public float arrowConfirmTime = 20;             // die Zeit bis der Pfeil verschwindet und die Richtung festgelegt wird 
+    public float arrowConfirmTime = 10;             // die Zeit bis der Pfeil verschwindet und die Richtung festgelegt wird 
     bool boolV = true;
     bool startDirection = false;
     public float teleportTime = 25;                 // Zeit zum anschauen der Map, also die Zeit die man in der Teleportphase ist
