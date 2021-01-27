@@ -8,6 +8,16 @@ TagManager:
   - PlaneTag
   - OutOff
   - Button
+  - Hole1
+  - Hole2
+  - Hole3
+  - Hole4
+  - Hole5
+  - Hole6
+  - Hole7
+  - Hole8
+  - Hole9
+  - Obstacle
   layers:
   - Default
   - TransparentFX

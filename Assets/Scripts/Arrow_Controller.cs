@@ -39,9 +39,10 @@ public class Arrow_Controller : MonoBehaviour
     }
     private void followCamera()
     {
+        
         transform.rotation = rotaionCamera.transform.rotation;   // Der Pfeil erhält die Roation der Kamera
         var rot = transform.rotation;                            // Varible rot erhält die aktuelle Rotation
-        transform.rotation = new Quaternion(0, rot.y, 0, rot.w); // Die Rotation wird auf der X und Z Achse gespeert
+        transform.rotation = new Quaternion(0, rot.y, 0, rot.w); // Die Rotation wird auf der X und Z Achse gespeert        
         xrrig.transform.position = golfBall.transform.position;  // XR Rig wird auf die Position des Balls gesetzt
 
         
